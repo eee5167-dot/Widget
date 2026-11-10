@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>캐나다 달러 환율</title>
+  <style>
+    /* 노션 임베드 블록에 꽉 맞추기 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;   /* 미니 차트 기본(밝은) 테마와 같은 흰색 */
+      overflow-x: hidden;    /* 가로 스크롤 제거 */
+    }
+    .widget-wrap {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    tv-mini-chart {
+      display: block;        /* 전용 태그는 기본이 글자처럼 배치되므로 블록으로 */
+      width: 100%;           /* 노션 블록 폭에 맞춤 */
+      height: 220px;         /* 차트 높이 고정 */
+    }
+  </style>
+
+  <!-- 위젯 스크립트 (원본 그대로, type="module" 유지) -->
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-mini-chart.js"></script>
+</head>
+<body>
+  <div class="widget-wrap">
+    <tv-mini-chart symbol="FX_IDC:CADKRW" time-frame="6M" show-time-scale></tv-mini-chart>
+  </div>
+</body>
+</html>
